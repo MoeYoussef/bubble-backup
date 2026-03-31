@@ -155,7 +155,7 @@
       },
       "heartbeat": {
         "every": "30m",
-        "model": "claude-cli/claude-haiku-4-5"
+        "model": "openai-codex/gpt-5.4"
       }
     },
     "list": [
