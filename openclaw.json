@@ -5,7 +5,8 @@
       "telegram",
       "slack",
       "nostr",
-      "googlechat"
+      "googlechat",
+      "browser"
     ],
     "entries": {
       "discord": {
@@ -36,6 +37,9 @@
             "apiKey": "BSA1IArJzXkoCvnM13j4bFb9sI6xRJR"
           }
         }
+      },
+      "browser": {
+        "enabled": true
       }
     }
   },
@@ -53,14 +57,14 @@
         }
       },
       "allowFrom": [
-        "6824992387",
-        "1212777380"
+        6824992387,
+        1212777380
       ]
     }
   },
   "meta": {
-    "lastTouchedVersion": "2026.3.24",
-    "lastTouchedAt": "2026-03-30T20:31:33.427Z"
+    "lastTouchedVersion": "2026.3.31",
+    "lastTouchedAt": "2026-03-31T23:33:17.966Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-25T22:02:44.921Z",
@@ -73,7 +77,13 @@
   },
   "update": {
     "channel": "stable",
-    "checkOnStart": false
+    "checkOnStart": true,
+    "auto": {
+      "enabled": true,
+      "stableDelayHours": 6,
+      "stableJitterHours": 12,
+      "betaCheckIntervalHours": 1
+    }
   },
   "browser": {
     "headless": true,
@@ -84,7 +94,7 @@
     "profiles": {
       "openai-codex:default": {
         "provider": "openai-codex",
-        "mode": "oauth"
+        "mode": "api_key"
       }
     }
   },
@@ -102,22 +112,13 @@
       },
       "models": {
         "anthropic/claude-opus-4-6": {
-          "alias": "Claude Opus 4.6",
-          "params": {
-            "cacheRetention": "short"
-          }
+          "alias": "Claude Opus 4.6"
         },
         "anthropic/claude-sonnet-4-6": {
-          "alias": "Claude Sonnet 4.6",
-          "params": {
-            "cacheRetention": "short"
-          }
+          "alias": "Claude Sonnet 4.6"
         },
         "anthropic/claude-haiku-4-5": {
-          "alias": "Claude Haiku 4.5",
-          "params": {
-            "cacheRetention": "short"
-          }
+          "alias": "Claude Haiku 4.5"
         },
         "anthropic/Claude Opus 4.6": {
           "params": {
@@ -177,7 +178,7 @@
       "enabled": true,
       "allowFrom": {
         "telegram": [
-          "6824992387"
+          6824992387
         ]
       }
     },
